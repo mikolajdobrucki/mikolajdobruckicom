@@ -1,202 +1,86 @@
-@import '_variables.css';
-@import '_syntax.css';
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-::-moz-selection {
-  background-color: $text-color;
-  color: $page-color;
-}
-::selection {
-  background-color: $text-color;
-  color: $page-color;
-}
-
-html {
-  background-color: $accent-color;
-}
+/* @import '_variables.css'; */
 
 body {
-  text-align: center;
-  background-color: $page-color;
-  color: mix($text-color, $page-color, 90%);
-  font-family: sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.8;
-  min-height: 100vh;
-  background:  $page-color;
-  background: url(/images/bg-grid.png), linear-gradient(320deg, $page-color 0%, $accent-color 100%);
-
-  @media (min-width: $narrow) {
-    font-size: 18px;
-  };
+  background: #292728;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family:  "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  text-align: left;
-  @media (min-width: $mid) {
-    width: 600px;
-  };
-  @media (min-width: $wide) {
-    width: 700px;
-  };
+svg[class^="logo"] {
+  position: fixed;
+  fill: white;
 }
 
-
-h1, h2, h3 {
-  color: $text-color;
-  font-weight: 600;
-  margin-top: 2em;
-  margin-bottom:0.2em;
-  line-height: 1;
-}
-h1 {
-  font-size: 3em;
-  margin-top:0.4em;
-  margin-bottom:0.2em;
-  line-height: 1;
-
-  @media (min-width: $mid) {
-    font-size: 5em;
-  };
-  @media (min-width: $wide) {
-    font-size: 6em;
-  };
+.logo_full {
+  top: 75px;
+  left: 75px;
 }
 
-p {
-  margin-top: 1em;
-  margin-bottom: 1em;
+.logo_underscore {
+  top: 117px;
+  right: 75px;
 }
 
-.subtitle {
-  font-size: 1.2em;
-  margin-top: 1em;
-  margin-bottom: 5em;
-}
-
-ul, ol {
-  padding-left: 1em;
-}
-
-a:link,
-a:visited {
-  color: $text-color;
-  text-decoration: none;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: mix($text-color, $accent-color, 20%)
-}
-a:hover,
-a:focus {
-  color: $text-color;
-  border-bottom-color: $text-color;
-}
-
-.nakedLink a:link,
-.nakedLink a:visited,
-.nakedLink a:hover,
-.nakedLink a:focus {
-  border-bottom-style:none;
-}
-
-.nav {
-  padding-top: 3em;
-
-  li {
-    display: inline;
-  }
-
-  a:link,
-  a:visited {
-    display: inline-block;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: mix($text-color, $accent-color, 40%);
-    border-bottom-style: none;
-    padding-top: 0.8em;
-    padding-bottom: 2em;
-    margin-left: 0;
-    margin-right: 0.7em;
-    width: 9em;
-    text-align: left;
-    color: mix($text-color, $accent-color, 80%);
-    text-decoration: none;
-  }
-  a:hover,
-  a:focus {
-      color: $text-color;
-      border-top-color: $text-color;
-      border-bottom-style: none;
-  }
-
-  small {
-    display: block;
-    font-size: 0.7em;
-    color: mix($text-color,$accent-color, 60%);
-  }
-}
-
-
-code {
-  font-size: 0.8em;
-  background-color: mix($text-color,$accent-color, 80%);
-  color: rgb(42, 65, 77);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  border-radius: 4px;
-  white-space: nowrap;
-}
-
-.date {
-  font-size: 0.8em;
-  font-style: italic;
+.logo_bottom {
+  bottom: 75px;
+  right: 75px;
 }
 
 main {
-  margin-top: 4em;
+  width: 100%;
+  padding: 75px;
+
+  display: grid;
+  grid-gap: 75px;
+  grid-template: "logo   navigation" 134px
+                 "titles content"    auto   / 476px 1fr;
 }
 
-pre {
-  overflow: auto;
-  border-radius: 6px;
-  code {
-    border-style: none;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
+h1 {
+  grid-area: logo;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
 }
 
+nav {
+  grid-area: navigation;
+  display: flex;
+  align-items: flex-end;
+}
 
-footer {
-  margin-top: 6em;
-  padding-top: 4em;
-  padding-bottom: 6em;
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: mix($text-color, $accent-color, 10%);
-  font-size: 0.7em;
-  color: mix($text-color, $accent-color, 50%);
+h2 {
+  margin: 0;
 
-  a:link,
-  a:visited {
-    color: mix($text-color, $accent-color, 90%);
-    border-bottom: solid 1px mix($accent-color, $page-color, 70%);
-  }
-  a:hover,
-  a:focus {
-    color: $text-color;
-    border-bottom: solid 1px $text-color;
-  }
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: .06em;
+}
+
+ul {
+  line-height: 2;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.inline {
+  line-height: 1;
+}
+
+ul.inline li {
+  display: inline-block;
+  padding: 0 1em 0 0;
+}
+
+a {
+  color: pink;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
