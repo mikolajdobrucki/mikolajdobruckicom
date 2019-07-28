@@ -11,13 +11,12 @@
 
     <meta name="description" content="{{ description }}">
     <meta name="keywords" content="{{ keywords }}">
-
-    <link rel="stylesheet" href="/css/styles.css">
     
     <style>
-      .pink a {
-        color: {{ designTokens.color.pink }};
-      }
+      {% include "css/_customProperties.css" %}
+      {% include "css/_layout.css" %}
+      {% include "css/_svg.css" %}
+      {% include "css/_typography.css" %}
     </style>
   </head>
   <body>

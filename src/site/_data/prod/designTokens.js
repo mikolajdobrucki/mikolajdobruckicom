@@ -16,25 +16,29 @@ module.exports = () => {
         const stylesPage = response.data.document.children.filter(item => {
           return item.name === "styleguide";
         })[0].children;
+        
+        // Find Figma frame with typography styles
+        const typographyFrame = stylesPage.filter(item => {
+          return item.name === "typography";
+        })[0].children;
 
+        // Specify default font size
+        const defaultFontSize = typographyFrame.filter(item => {
+          return item.name === "default";
+        })[0].style.fontSize;
 
         // Typography tokens
-        function getTypography(page) {
+        function getTypography() {
 
           // Object for all typography tokens
           const typographyStyles = {};
-
-          // Find Figma frame with typography styles
-          const typographyFrame = page.filter(item => {
-            return item.name === "typography";
-          })[0].children;
           
           // Map layers into single styles and merge them into typographyStyles object
           typographyFrame.map(typographyItem => {
             let typographyStyle = {
               [typographyItem.name]: {
                 family: `${typographyItem.style.fontFamily}`,
-                size: `${typographyItem.style.fontSize}`,
+                size: `${typographyItem.style.fontSize / defaultFontSize}`,
                 weight: `${typographyItem.style.fontWeight}`,
                 lineHeight: `${typographyItem.style.lineHeightPercent}`,
                 letterSpacing: `${typographyItem.style.letterSpacing}`
@@ -48,13 +52,13 @@ module.exports = () => {
         }
 
         // Color tokens
-        function getColors(page) {
+        function getColors() {
 
           // Object for all color tokens
           const colorStyles = {};
 
           // Find Figma frame with color styles
-          const colorsFrame = page.filter(item => {
+          const colorsFrame = stylesPage.filter(item => {
             return item.name === "colors";
           })[0].children;
 
@@ -84,10 +88,34 @@ module.exports = () => {
           return colorStyles;
         }
 
+        // Spacing tokens
+        function getSpacers() {
+
+          // Object for all color tokens
+          const spacers = {};
+
+          // Find Figma frame with color styles
+          const spacersFrame = stylesPage.filter(item => {
+            return item.name === "spacers";
+          })[0].children;
+
+          // Spacing tokens
+          spacersFrame.map(spacerItem => {
+            let spacer = {
+              [spacerItem.name]: `${spacerItem.absoluteBoundingBox.height / defaultFontSize}`
+            }
+
+            Object.assign(spacers, spacer)
+          })
+
+          return spacers;
+        }
+
         // All design tokens together
         tokensJSON = {
-          typography: getTypography(stylesPage),
-          color: getColors(stylesPage)
+          typography: getTypography(),
+          color: getColors(),
+          spacing: getSpacers()
         };
 
         seed(JSON.stringify(tokensJSON), `${__dirname}/../dev/designTokens.json`)
