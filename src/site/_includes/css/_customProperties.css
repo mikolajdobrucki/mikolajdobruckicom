@@ -1,0 +1,17 @@
+:root {
+  --spacing: calc({{ designTokens.spacing.spacerMobile }} * 1rem);
+  --bgColor: {{ designTokens.color.black }};
+  --textColor: {{ designTokens.color.white }};
+  --linkColor: {{ designTokens.color.pink }};
+}
+
+@media screen and (min-width: 640px) {
+  :root {
+    --spacing: calc({{ designTokens.spacing.spacerDesktop }} * 1rem);
+  }
+}
+
+.darkMode {
+  --bgColor: {{ designTokens.color.white }};
+  --textColor: {{ designTokens.color.black }};
+}

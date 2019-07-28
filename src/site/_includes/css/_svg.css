@@ -1,0 +1,25 @@
+svg[class^="logo"] {
+  position: fixed;
+  fill: var(--textColor);
+}
+
+.logo_full {
+  width: 25.6rem;
+  height: 7rem;
+  top: var(--spacing);
+  left: var(--spacing);
+}
+
+.logo_underscore {
+  width: 2.3rem;
+  height: 0.2rem;
+  top: 7rem;
+  right: var(--spacing);
+}
+
+.logo_bottom {
+  width: 5.6rem;
+  height: 3.5rem;
+  bottom: var(--spacing);
+  right: var(--spacing);
+}
