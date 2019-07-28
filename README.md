@@ -15,9 +15,6 @@ This project scaffold includes:
 - Serverless (FaaS) development pipeline with [Netlify Dev](https://www.netlify.com/products/dev) and [Netlify Functions](https://www.netlify.com/products/functions)
 
 
-![Eleventy screenshot](./eleventyone-template.jpg)
-
-
 ## Instructions
 
 To get your own instance of this 11ty starter project cloned and deploying to Netlify very quickly, just click the button below and follow the instructions.
