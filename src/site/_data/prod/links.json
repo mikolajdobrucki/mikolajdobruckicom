@@ -1,0 +1,74 @@
+{
+  "nav": [
+    {
+      "name": "twitter",
+      "url": "http://www.twitter.com/mikolajdobrucki"
+    },
+    {
+      "name": "dribbble",
+      "url": "http://www.dribbble.com/mikolajdobrucki"
+    },
+    {
+      "name": "behance",
+      "url": "http://www.behance.com/mikolajdobrucki"
+    },
+    {
+      "name": "github",
+      "url": "http://www.github.com/mikolajdobrucki"
+    },
+    {
+      "name": "medium",
+      "url": "http://www.medium.com/@mikolajdobrucki"
+    },
+    {
+      "name": "linkedin",
+      "url": "http://linkedin.com/in/mikolajdobrucki"
+    },
+    {
+      "name": "email",
+      "url": "mailto:tease@mikolajdobrucki.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "smashing magazine",
+      "url": "http://www.smashingmagazine.com/author/mikolaj-dobrucki/"
+    },
+    {
+      "name": "css tricks",
+      "url": "http://css-tricks.com/author/mikolajdobrucki/"
+    },
+    {
+      "name": "ux collective",
+      "url": "http://uxdesign.cc/@mikolajdobrucki"
+    },
+    {
+      "name": "muzli magazine",
+      "url": "http://medium.muz.li/@mikolajdobrucki"
+    }
+  ],
+  "sideprojects": [
+    {
+      "name": "ikonate",
+      "url": "https://www.ikonate.com/"
+    },
+    {
+      "name": "sketch ux kit",
+      "url": "http://mikolajdobrucki.com/sketchuxkit/"
+    }
+  ],
+  "conferencetalks": [
+    {
+      "name": "fullstack london 2019",
+      "url": "http://skillsmatter.com/skillscasts/13747-css-variables-what-do-they-know-do-they-know-things-let-s-find-out"
+    },
+    {
+      "name": "designways conf 2018",
+      "url": "http://youtu.be/Mk8hi8SLJ8g"
+    },
+    {
+      "name": "mobiconf 2018",
+      "url": "http://www.youtube.com/watch?v=7c727bNUlL4"
+    }
+  ]
+}

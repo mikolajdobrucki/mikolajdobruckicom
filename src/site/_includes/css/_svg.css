@@ -1,14 +1,15 @@
-svg[class^="logo"] {
+svg[class^="logo_"] {
   position: fixed;
   fill: var(--textColor);
+  display: none;
 }
 
-.logo_full {
-  width: 25.6rem;
-  height: 7rem;
-  top: var(--spacing);
-  left: var(--spacing);
+@media (min-width: 50rem) {
+  svg[class^="logo_"] {
+    display: block;
+  }
 }
+
 
 .logo_underscore {
   width: 2.3rem;

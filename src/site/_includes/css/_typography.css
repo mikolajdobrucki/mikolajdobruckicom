@@ -1,9 +1,22 @@
 h1 {
   grid-area: logo;
+  margin: 0;
+}
+
+h1 span {
+  position: absolute;
   height: 0;
   width: 0;
   overflow: hidden;
   opacity: 0;
+  
+}
+
+h1 svg {
+  fill: white;
+  width: 25.6rem;
+  height: 7rem;
+  max-width: 100%;
 }
 
 h2 {
