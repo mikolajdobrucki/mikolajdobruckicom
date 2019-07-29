@@ -5,7 +5,7 @@
   --linkColor: {{ designTokens.color.pink }};
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 50rem) {
   :root {
     --spacing: calc({{ designTokens.spacing.spacerDesktop }} * 1rem);
   }

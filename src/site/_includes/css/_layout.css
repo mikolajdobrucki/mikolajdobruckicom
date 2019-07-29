@@ -2,6 +2,12 @@ html {
   font-size: 100%;
 }
 
+@media (min-width: 110rem) {
+  html {
+    font-size: calc(100% + .25vw);
+  }
+}
+
 body {
   background: var(--bgColor);
   color: var(--textColor);
@@ -15,9 +21,26 @@ main {
 
   display: grid;
   grid-gap: var(--spacing);
-  grid-template: "logo   navigation" calc(7rem + var(--spacing))
-                 "titles content"    auto   / 25.6rem 1fr;
-  grid-auto-flow: row;
+  grid-template: "logo" 7rem
+                 "navigation" auto
+                 "titles"    auto
+                 "content";
+}
+                
+@media (min-width: 50rem) {
+  main {
+    grid-template: "logo   logo" 7rem
+                    "navigation navigation" auto
+                    "titles content"    auto   / calc(25.6rem - var(--spacing)) 1fr;
+                    
+  }
+}
+
+@media (min-width: 80rem) {
+  main {
+    grid-template: "logo   navigation" calc(7rem + var(--spacing))
+                   "titles content"    auto   / 25.6rem 1fr;
+  }
 }
 
 nav {
