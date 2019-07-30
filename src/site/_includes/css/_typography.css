@@ -23,7 +23,7 @@ h2 {
   margin: 0;
 
   font-weight: 400;
-  font-size: 2rem;
+  font-size: calc({{ designTokens.typography.heading.size }} * 1rem);
   letter-spacing: .06em;
 }
 
@@ -34,7 +34,8 @@ h2 {
 }
 
 ul {
-  line-height: 2;
+  font-size: calc({{ designTokens.typography.paragraph.size }} * 1rem);
+  line-height: 1.5;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -64,7 +65,7 @@ ul.inline li {
 }
 
 ul.inline li:not(:last-child) {
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 
 a {
