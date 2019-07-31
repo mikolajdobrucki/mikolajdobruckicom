@@ -11,7 +11,8 @@
   }
 }
 
-.darkMode {
+.lightMode {
   --bgColor: {{ designTokens.color.white }};
   --textColor: {{ designTokens.color.black }};
+  --linkColor: {{ designTokens.color.pinkdark }};
 }

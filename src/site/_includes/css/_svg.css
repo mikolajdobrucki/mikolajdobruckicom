@@ -1,3 +1,4 @@
+/* Common styles */
 svg[class^="logo_"] {
   position: fixed;
   fill: var(--textColor);
@@ -11,13 +12,67 @@ svg[class^="logo_"] {
 }
 
 
+/* Underscore (light mode switch) */
 .logo_underscore {
   width: 2.3rem;
-  height: 0.2rem;
-  top: calc(2rem + var(--spacing));
+  height: 2.3rem;
+  top: var(--spacing);
   right: var(--spacing);
+  cursor: pointer;
 }
 
+.logo_underscore:not(:hover) {
+  animation: bounce 10s infinite;
+}
+
+.logo_underscore .sun-moon {
+  transition: transform .8s;
+  transform: rotate(120deg);
+  transform-origin: 19px 19px;
+}
+
+.lightMode .logo_underscore .sun-moon {
+  transform: rotate(120deg) scale(1.5);
+}
+
+.lightMode .logo_underscore:hover .sun-moon {
+  transform: rotate(90deg) scale(1.5);
+}
+
+.logo_underscore .shadow {
+  opacity: 0;
+  fill: var(--bgColor);
+  transition: transform opacity 1s;
+}
+
+.lightMode .logo_underscore .shadow {
+  opacity: 1;
+  transform: translate(-11px, 8px);
+}
+
+.logo_underscore .rays {
+  transition: stroke-dasharray .2s linear;
+  stroke-dasharray: 0 1rem;
+  stroke-width: 2;
+  stroke: var(--textColor);
+}
+
+.logo_underscore:hover .rays {
+  transition: stroke-dasharray 3s linear;
+  stroke-dasharray: 1rem 1rem;
+}
+
+.lightMode .logo_underscore .rays {
+  stroke-dasharray: 0 1rem;
+  transition: stroke-dasharray .2s linear;
+}
+
+.logo_underscore:not(:hover) .sun-moon {
+  transform: translateY(2.3rem);
+}
+
+
+/* Bottom logo (:d) */
 .logo_bottom {
   width: 5.6rem;
   height: 3.5rem;

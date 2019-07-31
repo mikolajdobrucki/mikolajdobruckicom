@@ -13,7 +13,7 @@ h1 span {
 }
 
 h1 svg {
-  fill: white;
+  fill: var(--textColor);
   width: 25.6rem;
   height: 7rem;
   max-width: 100%;

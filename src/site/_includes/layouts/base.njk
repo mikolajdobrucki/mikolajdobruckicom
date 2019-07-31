@@ -14,6 +14,7 @@
     
     <style>
       {% include "css/_customProperties.css" %}
+      {% include "css/_bounce.css" %}
       {% include "css/_layout.css" %}
       {% include "css/_svg.css" %}
       {% include "css/_typography.css" %}
@@ -29,7 +30,7 @@
 
     {% set js %}
       {% include "js/core.js" %}
-      {% include "js/hello.js" %}
+      {% include "js/lightmode.js" %}
     {% endset %}
     <script>{{ js | jsmin | safe }}</script>
 
