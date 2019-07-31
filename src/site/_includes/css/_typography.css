@@ -2,6 +2,13 @@ h1 {
   grid-area: logo;
   margin: 0;
   position: relative;
+  font-size: 3.2vw;
+}
+
+@media (min-width: 28.75rem) {
+  h1 {
+    font-size: 1rem;
+  }
 }
 
 h1 span {

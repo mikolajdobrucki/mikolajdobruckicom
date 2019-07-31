@@ -17,17 +17,17 @@ svg[class^="logo_"] {
 
 /* Main logo */
 .logo_full_firstname {
-  width: 16rem;
-  height: 4.6rem;
+  width: 16em;
+  height: 4.6em;
 }
 .logo_full_underscore {
-  width: 2.8rem;
-  height: 4.6rem;
+  width: 2.8em;
+  height: 4.6em;
   /* animation: cursor 20s step-end infinite; */
 }
 .logo_full_lastname {
-  width: 25.6rem;
-  height: 3.5rem;
+  width: 25.6em;
+  height: 3.5em;
 }
 
 
