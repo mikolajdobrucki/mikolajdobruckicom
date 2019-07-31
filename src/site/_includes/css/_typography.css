@@ -1,6 +1,7 @@
 h1 {
   grid-area: logo;
   margin: 0;
+  position: relative;
 }
 
 h1 span {
@@ -9,14 +10,26 @@ h1 span {
   width: 0;
   overflow: hidden;
   opacity: 0;
-  
 }
 
-h1 svg {
-  fill: var(--textColor);
-  width: 25.6rem;
-  height: 7rem;
-  max-width: 100%;
+#tooltip-span {
+  display: none;
+  position: fixed;
+}
+
+h1:hover #tooltip-span {
+  display: block;
+}
+
+#tooltip-span img { 
+  max-width: 512px;
+  height: auto;
+}
+
+.firstname {
+  display: inline-block;
+  overflow: hidden;
+  animation: type 20s step-end infinite;
 }
 
 h2 {

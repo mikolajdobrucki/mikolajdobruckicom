@@ -1,14 +1,33 @@
 /* Common styles */
 svg[class^="logo_"] {
-  position: fixed;
   fill: var(--textColor);
+}
+
+.logo_underscore, .logo_bottom {
+  position: fixed;
   display: none;
 }
 
 @media (min-width: 50rem) {
-  svg[class^="logo_"] {
+  .logo_underscore, .logo_bottom {
     display: block;
   }
+}
+
+
+/* Main logo */
+.logo_full_firstname {
+  width: 16rem;
+  height: 4.6rem;
+}
+.logo_full_underscore {
+  width: 2.8rem;
+  height: 4.6rem;
+  /* animation: cursor 20s step-end infinite; */
+}
+.logo_full_lastname {
+  width: 25.6rem;
+  height: 3.5rem;
 }
 
 
