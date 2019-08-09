@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'Basier Square Mono';
+  src: url('fonts/basiersquaremono-regular-webfont.eot');
+  src: url('fonts/basiersquaremono-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/basiersquaremono-regular-webfont.woff2') format('woff2'),
+       url('fonts/basiersquaremono-regular-webfont.woff') format('woff'),
+       url('fonts/basiersquaremono-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 h1 {
   grid-area: logo;
   margin: 0;
