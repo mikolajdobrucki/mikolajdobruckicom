@@ -1,8 +1,8 @@
 :root {
   --spacing: calc({{ designTokens.spacing.spacerMobile }} * 1rem);
-  --bgColor: {{ designTokens.color.black }};
-  --textColor: {{ designTokens.color.white }};
-  --linkColor: {{ designTokens.color.pink }};
+  --bgColor: {{ designTokens.color.dark }};
+  --textColor: {{ designTokens.color.light }};
+  --linkColor: {{ designTokens.color.primaryLight }};
 }
 
 @media screen and (min-width: 50rem) {
@@ -12,7 +12,7 @@
 }
 
 .lightMode {
-  --bgColor: {{ designTokens.color.white }};
-  --textColor: {{ designTokens.color.black }};
-  --linkColor: {{ designTokens.color.pinkdark }};
+  --bgColor: {{ designTokens.color.light }};
+  --textColor: {{ designTokens.color.dark }};
+  --linkColor: {{ designTokens.color.primaryDark }};
 }

@@ -27,6 +27,11 @@ module.exports = () => {
           return item.name === "default";
         })[0].style.fontSize;
 
+        // Round a token to two decimal places
+        function toTwoDecimals (num) {
+          return Math.round(num * 100) / 100;
+        }
+
         // Typography tokens
         function getTypography() {
 
@@ -78,11 +83,13 @@ module.exports = () => {
           
           // Map layers into single styles and merge them into colorStyles object
           colorsFrame.map(colorItem => {
-            let colorStyle = {
-              [colorItem.name]: toRGBA(colorItem.fills[0])
+            if (colorItem.type === 'RECTANGLE') { // Ignore groups and other supporting layers such as backgrounds and text
+              let colorStyle = {
+                [colorItem.name]: toRGBA(colorItem.fills[0])
+              }
+  
+              Object.assign(colorStyles, colorStyle);
             }
-
-            Object.assign(colorStyles, colorStyle);
           })
 
           return colorStyles;
@@ -102,7 +109,7 @@ module.exports = () => {
           // Spacing tokens
           spacersFrame.map(spacerItem => {
             let spacer = {
-              [spacerItem.name]: `${spacerItem.absoluteBoundingBox.height / defaultFontSize}`
+              [spacerItem.name]: `${toTwoDecimals(spacerItem.absoluteBoundingBox.height / defaultFontSize)}`
             }
 
             Object.assign(spacers, spacer)
