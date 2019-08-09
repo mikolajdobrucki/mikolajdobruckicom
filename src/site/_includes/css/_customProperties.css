@@ -1,6 +1,7 @@
 :root {
   --spacing: calc({{ designTokens.spacing.spacerMobile }} * 1rem);
   --bgColor: {{ designTokens.color.dark }};
+  --mediumColor: rgba(247, 190, 202,.2);
   --textColor: {{ designTokens.color.light }};
   --linkColor: {{ designTokens.color.primaryLight }};
 }
