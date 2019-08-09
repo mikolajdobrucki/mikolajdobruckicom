@@ -3,6 +3,7 @@ h1 {
   margin: 0;
   position: relative;
   font-size: 3.2vw;
+  max-width: 25.6em;
 }
 
 @media (min-width: 28.75rem) {
