@@ -1,33 +1,25 @@
 @keyframes type {
-  from, 10%, 27.5% {
-    max-width: 3.8em;
+  from, 10%, 27.5%, to {
+    transform: translateX(-48%);
   }
   
   11%, 27% {
-    max-width: 5.1em;
+    transform: translateX(-43%);
   }
   
   12.5%, 26.5% {
-    max-width: 7.9em;
+    transform: translateX(-33.5%);
   }  
   
   13%, 26% {
-    max-width: 10.5em;
+    transform: translateX(-22%);
   }
   
   14%, 25.5% {
-    max-width: 12.1em;
+    transform: translateX(-6%);
   }  
   
-  15.5%, 25% {
-    max-width: 15em;
-  }  
-  
-  16% {
-    max-width: 16em;
-  }  
-
-  to {
-    max-width: 18em;
+  14.4%, 25% {
+    transform: translateX(0%);
   }
 }

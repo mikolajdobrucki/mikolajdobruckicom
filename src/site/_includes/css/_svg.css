@@ -16,18 +16,20 @@ svg[class^="logo_"] {
 
 
 /* Main logo */
+.logo_full {
+  max-width: 100%;
+}
+
 .logo_full_firstname {
-  width: 16em;
-  height: 4.6em;
+  
 }
-.logo_full_underscore {
-  width: 2.8em;
-  height: 4.6em;
-  /* animation: cursor 20s step-end infinite; */
+.logo_full_mask {
+  transform: translateX(-38%);
+  animation: type 20s step-end infinite;
+
 }
-.logo_full_lastname {
-  width: 25.6em;
-  height: 3.5em;
+.logo_full_maskshape {
+  fill: var(--bgColor);
 }
 
 

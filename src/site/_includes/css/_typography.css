@@ -13,8 +13,7 @@ h1 {
   grid-area: logo;
   margin: 0;
   position: relative;
-  font-size: 3.2vw;
-  max-width: 25.6em;
+  max-width: 27rem;
 }
 
 @media (min-width: 28.75rem) {
@@ -43,12 +42,6 @@ h1:hover #tooltip-span {
 #tooltip-span img { 
   max-width: 512px;
   height: auto;
-}
-
-.firstname {
-  display: inline-block;
-  overflow: hidden;
-  animation: type 20s step-end infinite;
 }
 
 h2 {
