@@ -20,9 +20,6 @@ svg[class^="logo_"] {
   max-width: 100%;
 }
 
-.logo_full_firstname {
-  
-}
 .logo_full_mask {
   transform: translateX(-38%);
   animation: type 20s step-end infinite;
@@ -104,7 +101,6 @@ svg[class^="logo_"] {
 
 .logo_bottom .front, .logo_bottom .back {
   transform-origin: center;
-  transition: 1s;
 }
 
 .logo_bottom .back {
@@ -114,7 +110,7 @@ svg[class^="logo_"] {
 }
 
 .logo_bottom:hover .back {
-  animation: rotateBack 10s linear infinite forwards;
+  animation: rotateBack 3s linear infinite forwards;
 }
 
 .logo_bottom .front {
@@ -127,5 +123,5 @@ svg[class^="logo_"] {
 }
 
 .logo_bottom:hover .front {
-  animation: rotateFront 10s linear infinite forwards;
+  animation: rotateFront 3s linear infinite forwards;
 }
