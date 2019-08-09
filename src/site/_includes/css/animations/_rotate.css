@@ -1,0 +1,27 @@
+@keyframes rotateFront {
+  from {
+    transform: rotate3d(0,1,0,0deg);
+  }
+  to {
+    transform: rotate3d(0,1,0,360deg);
+  }
+}
+
+@keyframes rotateBack {
+  from {
+    transform: rotate3d(0,1,0,0deg) translateZ(10px);
+    z-index: 0;
+  }
+
+  25%,74% {
+    z-index: 2;
+  }
+  
+  75% {
+    z-index: 0;
+  }
+  
+  to {
+    transform: rotate3d(0,1,0,360deg) translateZ(10px);
+  }
+}

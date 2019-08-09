@@ -42,6 +42,7 @@ svg[class^="logo_"] {
 
 .logo_underscore:not(:hover) {
   animation: bounce 10s infinite;
+  animation-delay: 2s;
 }
 
 .logo_underscore .sun-moon {
@@ -97,4 +98,32 @@ svg[class^="logo_"] {
   height: 3.5rem;
   bottom: var(--spacing);
   right: var(--spacing);
+}
+
+.logo_bottom .front, .logo_bottom .back {
+  transform-origin: center;
+  transition: 1s;
+}
+
+.logo_bottom .back {
+  fill: var(--linkColor);
+  transform: rotate3d(0,1,0,0deg) translateZ(10px);
+  position: relative;
+}
+
+.logo_bottom:hover .back {
+  animation: rotateBack 10s linear infinite forwards;
+}
+
+.logo_bottom .front {
+  fill: var(--textColor);
+  transform: rotate3d(0,1,0,0deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.logo_bottom:hover .front {
+  animation: rotateFront 10s linear infinite forwards;
 }
