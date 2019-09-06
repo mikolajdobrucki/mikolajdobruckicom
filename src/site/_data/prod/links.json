@@ -59,6 +59,10 @@
   ],
   "conferencetalks": [
     {
+      "name": "front conference zurich 2019",
+      "url": "http://vimeo.com/356648535"
+    },
+    {
       "name": "fullstack london 2019",
       "url": "http://skillsmatter.com/skillscasts/13747-css-variables-what-do-they-know-do-they-know-things-let-s-find-out"
     },
