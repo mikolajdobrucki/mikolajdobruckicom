@@ -55,6 +55,14 @@
     {
       "name": "sketch ux kit",
       "url": "http://mikolajdobrucki.com/sketchuxkit/"
+    },
+    {
+      "name": "diffchecker",
+      "url": "http://diffchecker.com/"
+    },
+    {
+      "name": "svgviewer",
+      "url": "http://svgviewer.dev/"
     }
   ],
   "conferencetalks": [
