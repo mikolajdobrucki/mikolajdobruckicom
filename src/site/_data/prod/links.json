@@ -58,7 +58,7 @@
     },
     {
       "name": "diffchecker",
-      "url": "http://diffchecker.com/"
+      "url": "http://diffchecker.com/desktop"
     },
     {
       "name": "svgviewer",
@@ -66,6 +66,10 @@
     }
   ],
   "conferencetalks": [
+    {
+      "name": "codemotion berlin 2019",
+      "url": "http://youtu.be/K9OW4jlqRnQ"
+    },
     {
       "name": "front conference zurich 2019",
       "url": "http://vimeo.com/356648535"
