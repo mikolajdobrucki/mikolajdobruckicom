@@ -2,12 +2,6 @@ html {
   font-size: 100%;
 }
 
-@media (min-width: 110rem) {
-  html {
-    font-size: calc(100% + .25vw);
-  }
-}
-
 body {
   background: var(--bgColor);
   color: var(--textColor);
