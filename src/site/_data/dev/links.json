@@ -63,6 +63,18 @@
     {
       "name": "svgviewer",
       "url": "http://svgviewer.dev/"
+    },
+    {
+      "name": "figma sketching kit",
+      "url": "https://www.figma.com/community/file/898186441853776318"
+    },
+    {
+      "name": "ikonate for figma",
+      "url": "https://www.figma.com/community/file/906159169146029844"
+    },
+    {
+      "name": "howtocss.dev",
+      "url": "https://www.howtocss.dev/"
     }
   ],
   "conferencetalks": [
